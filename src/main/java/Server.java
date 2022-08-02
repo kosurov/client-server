@@ -7,7 +7,7 @@ import java.net.Socket;
 
 public class Server {
     public static void main(String[] args) {
-        int port = 8105; // порт можете выбрать любой в доступном диапазоне 0-65536. Но чтобы не нарваться на уже занятый - рекомендуем использовать около 8080
+        int port = 8105;
         try (ServerSocket serverSocket = new ServerSocket(port)) {
             while (true) {
                 try (Socket clientSocket = serverSocket.accept(); // ждем подключения
